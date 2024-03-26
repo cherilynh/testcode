@@ -222,21 +222,24 @@ def load_data():
 def save_data(data):
     data.to_csv("tracking_data.csv", index=False)
 
-# Sleep tracker page
 def sleep_tracker():
     st.subheader("Sleep Tracker")
     data = load_data()
 
     # Input fields
     today = datetime.today().strftime('%Y-%m-%d')
-    sleep = st.slider("Sleep (hours):", min_value=0.0, max_value=24.0, step=0.25, value=8.0)
+    sleep = st.slider("Sleep (hours):", min_value=0.0, max_value=24.0, step=0.5, value=8.0)
 
     # Save data button
     if st.button("Save"):
         new_entry = {"Date": today, "Sleep (hrs)": sleep}
         data = data.append(new_entry, ignore_index=True)
-        save_data(data)
+        save_data(data)  # Save the updated DataFrame
         st.success("Data saved successfully!")
+
+    # Show DataFrame
+    st.subheader("Recent Sleep Entries")
+    st.write(data)
 
     # Show DataFrame
     st.subheader("Recent Sleep Entries")
