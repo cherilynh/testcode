@@ -7,16 +7,15 @@ st.sidebar.title("Menu")
 page = st.sidebar.radio("Choose what you need",["FitMind - Introduction", "Fitness", "Mental Health", "Food & Recipes"])
 
 if page == "FitMind - Introduction":
-    st.title("FitMind")
+    st.title("Welcome to FitMind!")
     st.markdown("""
-    FitMind ist eine ganzheitliche Gesundheits-App, die Fitness und mentales Wohlbefinden kombiniert, um Benutzern zu helfen, ein ausgewogenes und gesundes Leben zu führen.
+    FitMind is a health app that combines fitness and mental wellbeing to help users lead a balanced and healthy life.
     """)
-    st.subheader("Willkommen bei FitMind!")
-    st.write("FitMind unterstützt dich dabei, deine Fitnessziele zu erreichen und gleichzeitig dein mentales Wohlbefinden zu verbessern.")
+    st.write("FitMind helps you to achieve your fitness goals and improve your mental well-being at the same time.")
 
 elif page == "Fitness":
     st.title("Fitness")
-    
+    st.subheader("Choose your level")
     st.subheader("Beginners")
     st.write("If you're new to exercise or a particular exercise, start with 1 to 2 sets per exercise. Focus on learning proper form and gradually increasing the number of sets as you become more comfortable with the movements.")
     st.subheader("Intermediate")
@@ -24,73 +23,122 @@ elif page == "Fitness":
     st.subheader("Advanced")
     st.write("Advanced individuals who are looking to increase muscle size or strength may benefit from performing 4 to 5 sets per exercise. Higher volume workouts can help stimulate muscle hypertrophy and strength gains.")
    
-    st.title("Workouts")
-    st.subheader("Choose your Workouts")
+    st.divider()
+    
+    if page == "Fitness":
+        st.sidebar.subheader("Workouts")
+        
+        Workouts = [" ", "Arms", "Abs", "Legs", "Butt"]
+        selected_subcategory = st.sidebar.selectbox("Choose a specific area", Workouts)
+                
+    if selected_subcategory == " ":
+        st.subheader(" ")
+        st.write(" ")
+        
+    elif selected_subcategory == "Arms":
+        st.subheader("Arms")
+        st.write("Content for Cardio category")
+    
+    elif selected_subcategory == "Abs":
+        st.subheader("Abs")
+        st.write("Content for Strength Training category")
+        
+    elif selected_subcategory == "Legs":
+        st.subheader("Legs")
+        st.write("Content for Flexibility category")
+        
+    elif selected_subcategory == "Butt":
+        st.subheader("Butt")
+        st.write("Content for Endurance category")
+        st.subheader("Squats")
+        st.write("Instructions:")
+        st.write(" 1. Stand with your feet wider than your Hips and feet pointed slightly out.")
+        st.write(" 2. Begin bendin your knees until parallel to the floor with your back as straight as possible.")
+        st.write(" 3. Push back up until you reach standing positions.")
+        st.write(" 4. Repeat.")
+        st.video('https://youtu.be/xqvCmoLULNY')
 
-    st.subheader("Lunges")
+        st.subheader("Lunges")
+    
+        st.subheader("Narrow Squats")
+    
+        st.subheader("Sumo Squats")
+        
+    st.sidebar.subheader("Planned Programs")
+    second_subcategory = st.sidebar.selectbox("Choose a second subcategory", [" ", "Summerbody", "Get That Booty", "VERY HARD ABS"])
+   
+    if second_subcategory == " ":
+        st.subheader(" ")
+        st.write(" ")
+    
+    elif second_subcategory == "Summerbody":
+        st.subheader("Summerbody")
+        st.write("Summerbody")
+        
+    elif second_subcategory == "Get That Booty":
+        st.subheader("Get That Booty")
+        st.write("Get That Booty")
+        
+    elif second_subcategory == "VERY HARD ABS":
+        st.subheader("ABS ABS ABS")
 
-    st.subheader("Squats")
-    st.write("Stand with your feet wider than your Hips and feet pointed slightly out.")
-    st.write("Begin bendin your knees until parallel to the floor with your back as straight as possible.")
-    st.write("Push back up until you reach standing positions.")
-    st.write("Repeat.")
-    st.video('https://youtu.be/xqvCmoLULNY')
+    st.sidebar.subheader("Fitness Tracker")
+    third_subcategory = st.sidebar.selectbox("Choose a third subcategory", ["  ", "Track Fitness"])
+    
+    if third_subcategory == " ":
+        st.write(" ")
+        
+    elif third_subcategory == "Track Fitness":
+        st.title("Fitness Tracker")
+        st.subheader("Track your fitness and get recommendations")
+        # Input Widgets
+        age = st.slider("Age", 18, 100, 25)
+        weight = st.number_input("Weight (kg)", min_value=20.0, max_value=500.0, value=70.0, step=0.1)
+        height = st.number_input("Height (cm)", min_value=100, max_value=300, value=170, step=1)
+        activity_level = st.selectbox("Activity Level", ["Sedentary", "Lightly active", "Moderately active", "Very active", "Extremely active"])
 
-    st.write("Narrow Squats")
+        # Calculate BMI
+        bmi = weight / ((height/100) ** 2)
+        st.write(f"Your BMI is: {bmi:.2f}")
 
-    st.subheader("Sumo Squats")
+        # BMI Classification
+        bmi_data = pd.DataFrame({
+            'Category': ['Underweight', 'Normal weight', 'Overweight', 'Obesity'],
+            'BMI Range': ['< 18.5', '18.5 - 24.9', '25.0 - 29.9', '≥ 30.0'],
+            'Recommendation': ['Gain weight', 'Maintain normal weight', 'Lose weight', 'Lose weight significantly']
+        })
+        st.write("BMI Classification:")
+        st.dataframe(bmi_data)
 
-    # Fitness Tracker
-    st.title("Fitness Tracker")
-    st.subheader("Tracke deine Fitness und erhalte Empfehlungen")
-    # Input Widgets
-    age = st.slider("Alter", 18, 100, 25)
-    weight = st.number_input("Gewicht (kg)", min_value=20.0, max_value=500.0, value=70.0, step=0.1)
-    height = st.number_input("Größe (cm)", min_value=100, max_value=300, value=170, step=1)
-    activity_level = st.selectbox("Aktivitätslevel", ["Sedentär", "Leicht aktiv", "Mäßig aktiv", "Sehr aktiv", "Extrem aktiv"])
-
-    # Calculate BMI
-    bmi = weight / ((height/100) ** 2)
-    st.write(f"Ihr BMI beträgt: {bmi:.2f}")
-
-    # BMI Classification
-    bmi_data = pd.DataFrame({
-        'Kategorie': ['Untergewicht', 'Normalgewicht', 'Übergewicht', 'Adipositas'],
-        'BMI-Bereich': ['< 18.5', '18.5 - 24.9', '25.0 - 29.9', '≥ 30.0'],
-        'Empfehlung': ['Zunehmen', 'Normalgewicht halten', 'Abnehmen', 'Stark abnehmen']
-    })
-    st.write("BMI-Klassifikation:")
-    st.dataframe(bmi_data)
-
-    # BMI Chart
-    st.bar_chart(bmi_data.set_index('Kategorie')['BMI-Bereich'])
+        # BMI Chart
+        st.bar_chart(bmi_data.set_index('Category')['BMI Range'])
 
 elif page == "Mental Health":
     st.title("Mental Health")
-    st.write("Hier finden Sie Informationen über unser Team und unsere Mission.")
-    st.subheader("Überprüfe deine Stimmung und Stresslevel")
+    st.write("Here you will find information about our team and our mission.")
+    st.subheader("Check your mood and stress level")
 
     # Mood and Stress Level Input Widgets
-    mood = st.slider("Stimmung", 0, 10, 5)
-    stress_level = st.slider("Stresslevel", 0, 10, 5)
+    mood = st.slider("Mood", 0, 10, 5)
+    stress_level = st.slider("Stress Level", 0, 10, 5)
 
     # Mood and Stress Level Chart
     mood_data = pd.DataFrame({
-        'Datum': pd.date_range(start='2024-01-01', periods=30),
-        'Stimmung': np.random.randint(0, 11, size=30),
-        'Stresslevel': np.random.randint(0, 11, size=30)
+        'Date': pd.date_range(start='2024-01-01', periods=30),
+        'Mood': np.random.randint(0, 11, size=30),
+        'Stress Level': np.random.randint(0, 11, size=30)
     })
-    st.write("Verlauf der Stimmung und des Stresslevels:")
-    st.line_chart(mood_data.set_index('Datum'))
+    st.write("Mood and Stress Level History:")
+    st.line_chart(mood_data.set_index('Date'))
 
 elif page == "Food & Recipes":
     st.title("Food & Recipes")
 
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.subheader("Über uns")
-st.sidebar.info("Diese App wurde von Julia und Cherilyn entwickelt.")
+st.sidebar.subheader("About Us")
+st.sidebar.info("This app was developed by Julia and Cherilyn.")
 
-st.sidebar.subheader("Kontakt")
-st.sidebar.text("Bei Fragen oder Anregungen kontaktieren Sie uns unter:")
-st.sidebar.text("fitmind@example.com")
+st.sidebar.subheader("Contact")
+st.sidebar.text("For questions or suggestions, contact us at:")
+st.sidebar.text("fitmindbyjc@gmail.com")
