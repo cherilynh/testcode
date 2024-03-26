@@ -244,6 +244,11 @@ def sleep_tracker():
     st.write(data)
 
 # Stress level tracker page
+
+Es scheint, dass der Fehler beim Hinzufügen des neuen Eintrags zum DataFrame auftritt, unabhängig davon, welchen Tracker Sie verwenden. Es könnte ein Problem mit der Struktur des neuen Eintrags geben. Lassen Sie uns sicherstellen, dass die Struktur des neuen Eintrags mit der des DataFrames übereinstimmt. Hier ist eine aktualisierte Version der Funktionen stress_level_tracker() und mood_tracker():
+
+python
+Copy code
 def stress_level_tracker():
     st.subheader("Stress Level Tracker")
     data = load_data()
@@ -255,6 +260,7 @@ def stress_level_tracker():
     # Save data button
     if st.button("Save"):
         new_entry = {"Date": today, "Stress Level": stress_level}
+        print("New entry:", new_entry)  # Output the new entry to check its structure
         data = data.append(new_entry, ignore_index=True)
         save_data(data)
         st.success("Data saved successfully!")
@@ -263,7 +269,6 @@ def stress_level_tracker():
     st.subheader("Recent Stress Level Entries")
     st.write(data)
 
-# Mood tracker page
 def mood_tracker():
     st.subheader("Mood Tracker")
     data = load_data()
@@ -275,6 +280,7 @@ def mood_tracker():
     # Save data button
     if st.button("Save"):
         new_entry = {"Date": today, "Mood": mood}
+        print("New entry:", new_entry)  # Output the new entry to check its structure
         data = data.append(new_entry, ignore_index=True)
         save_data(data)
         st.success("Data saved successfully!")
@@ -282,7 +288,7 @@ def mood_tracker():
     # Show DataFrame
     st.subheader("Recent Mood Entries")
     st.write(data)
-
+    
 # Main function
 def main():
     st.title("Mental Health Tracker")
