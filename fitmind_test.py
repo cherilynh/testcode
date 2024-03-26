@@ -121,14 +121,17 @@ elif page == "Mental Health":
      if selected_subcategory == " ":
         st.write(" ")
 
-     elif selected_subcategory == "Stresslevel tracker":
+     elif selected_subcategory == "Stresslevel tracker ":
             st.write("Track your Stresslevels")
+            stress_level = st.slider("Stress Level", 0, 10, 5)
 
      elif selected_subcategory == "Mood tracker":
             st.write("Track your mood")
+            mood_level = st.slider("Mood Level", 0, 10, 5)
 
      elif selected_subcategory == "Sleep tracker":
             st.write("track your sleeping hours")
+            sleep_hours = st.slider("Hours of Sleep", 0, 24, 8)
 
 elif page == "Food & Recipes":
     st.title("Food & Recipes")
