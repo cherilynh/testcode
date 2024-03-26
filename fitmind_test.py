@@ -273,7 +273,8 @@ def mood_tracker():
 
     # Save data button
     if st.button("Save"):
-        new_entry = {"Date": today, "Mood": mood}
+        new_entry = {"Date": [today], "Mood": [mood]}  # Ensure that the new entry has the correct structure
+        print("New entry:", new_entry)  # Output the new entry to check its structure
         data = data.append(new_entry, ignore_index=True)
         save_data(data)
         st.success("Data saved successfully!")
