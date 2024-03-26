@@ -243,10 +243,6 @@ def sleep_tracker():
     st.subheader("Recent Sleep Entries")
     st.write(data)
 
-    # Show DataFrame
-    st.subheader("Recent Sleep Entries")
-    st.write(data)
-
 # Stress level tracker page
 def stress_level_tracker():
     st.subheader("Stress Level Tracker")
