@@ -114,22 +114,21 @@ elif page == "Fitness":
         st.bar_chart(bmi_data.set_index('Category')['BMI Range'])
 
 elif page == "Mental Health":
-    st.title("Mental Health")
-    st.write("Here you will find information about our team and our mission.")
-    st.subheader("Check your mood and stress level")
+     st.sidebar.subheader("Mental Health Subcategories")
+     Mental_Health_Subcategories = [" ", "Stresslevel tracker ", "Mood tracker", "Sleep tracker"]
+     selected_subcategory = st.sidebar.selectbox("Choose a tracker", Mental_Health_Subcategories)
+  
+     if selected_subcategory == " ":
+        st.write(" ")
 
-    # Mood and Stress Level Input Widgets
-    mood = st.slider("Mood", 0, 10, 5)
-    stress_level = st.slider("Stress Level", 0, 10, 5)
+     elif selected_subcategory == "Stresslevel tracker":
+            st.write("Track your Stresslevels")
 
-    # Mood and Stress Level Chart
-    mood_data = pd.DataFrame({
-        'Date': pd.date_range(start='2024-01-01', periods=30),
-        'Mood': np.random.randint(0, 11, size=30),
-        'Stress Level': np.random.randint(0, 11, size=30)
-    })
-    st.write("Mood and Stress Level History:")
-    st.line_chart(mood_data.set_index('Date'))
+     elif selected_subcategory == "Mood tracker":
+            st.write("Track your mood")
+
+     elif selected_subcategory == "Sleep tracker":
+            st.write("track your sleeping hours")
 
 elif page == "Food & Recipes":
     st.title("Food & Recipes")
