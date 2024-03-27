@@ -5,21 +5,23 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 from github_contents import GithubContents
 
-# Hier fügst du die erforderlichen Informationen für die Initialisierung der GithubContents-Klasse ein
-owner = "your_github_username"
-repo = "your_repository_name"
-token = "your_github_personal_access_token"
+if __name__ == "__main__":
+    owner = "your_github_username"
+    repo = "your_repository_name"
+    token = "your_github_personal_access_token"
 
-# Erstellen einer Instanz der GithubContents-Klasse
-gh_contents = GithubContents(owner, repo, token)
+    # Erstellen einer Instanz der GithubContents-Klasse
+    gh_contents = GithubContents(owner, repo, token)
 
-# Beispiel für die Verwendung der neuen Methoden
-if gh_contents.file_exists("data/diary.csv"):
-    # Wenn die Datei existiert, lese sie als DataFrame
-    diary_data = gh_contents.read_df("data/diary.csv")
-    st.write(diary_data)
-else:
-    st.write("No diary entries found.")
+    # Beispiel für die Verwendung der neuen Methoden
+    if gh_contents.file_exists("data/diary.csv"):
+        # Wenn die Datei existiert, lese sie als DataFrame
+        diary_data = gh_contents.read_df("data/diary.csv")
+        st.write(diary_data)
+    else:
+        st.write("No diary entries found.")
+
+    main()
 
 
 st.sidebar.header("Menu")
@@ -241,6 +243,7 @@ def save_data(data):
     data.to_csv("tracking_data.csv", index=False)
 
 # Sleep tracker page
+# Sleep tracker page
 def sleep_tracker():
     st.subheader("Sleep Tracker")
     data = load_data()
@@ -248,6 +251,10 @@ def sleep_tracker():
     # Input fields
     today = datetime.today().strftime('%Y-%m-%d')
     sleep = st.slider("Sleep (hours):", min_value=0.0, max_value=24.0, step=0.25, value=8.0)
+
+    # Initialize DataFrame if it's None
+    if data is None:
+        data = pd.DataFrame(columns=["Date", "Sleep (hrs)", "Stress Level", "Mood"])
 
     # Save data button
     if st.button("Save"):
@@ -259,6 +266,7 @@ def sleep_tracker():
     # Show DataFrame
     st.subheader("Recent Sleep Entries")
     st.write(data)
+
 
 # Stress level tracker page
 def stress_level_tracker():
