@@ -5,48 +5,21 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 from github_contents import GithubContents
 
-def init_dataframe():
-    """Initialize or load the DataFrame."""
-    if 'df' not in st.session_state:
-        st.session_state.df = pd.DataFrame(columns=["Date", "Sleep (hrs)", "Stress Level", "Mood"])
+# Hier fügst du die erforderlichen Informationen für die Initialisierung der GithubContents-Klasse ein
+owner = "your_github_username"
+repo = "your_repository_name"
+token = "your_github_personal_access_token"
 
-def add_entry():
-    """Add a new entry to the DataFrame."""
-    new_entry = {
-        "Date": datetime.today().strftime('%Y-%m-%d'),
-        "Sleep (hrs)": st.slider("Sleep (hours):", min_value=0.0, max_value=24.0, step=0.25, value=8.0),
-        "Stress Level": st.slider("Stress Level:", min_value=0, max_value=10, step=1, value=5),
-        "Mood": st.slider("Mood (1-10):", min_value=1, max_value=10, step=1, value=5)
-    }
+# Erstellen einer Instanz der GithubContents-Klasse
+gh_contents = GithubContents(owner, repo, token)
 
-    st.session_state.df = st.session_state.df.append(new_entry, ignore_index=True)
-
-def display_dataframe():
-    """Display the DataFrame in the app."""
-    if not st.session_state.df.empty:
-        st.subheader("Recent Entries")
-        st.write(st.session_state.df)
-    else:
-        st.write("No entries yet.")
-
-def main():
-    st.title("Mental Health Tracker")
-
-    init_dataframe()
-
-    st.sidebar.subheader("Menu")
-    page = st.sidebar.radio("Choose a tracker", ["Add Entry", "View Entries"])
-
-    if page == "Add Entry":
-        st.subheader("Add Entry")
-        add_entry()
-
-    elif page == "View Entries":
-        st.subheader("View Entries")
-        display_dataframe()
-
-if __name__ == "__main__":
-    main()
+# Beispiel für die Verwendung der neuen Methoden
+if gh_contents.file_exists("data/diary.csv"):
+    # Wenn die Datei existiert, lese sie als DataFrame
+    diary_data = gh_contents.read_df("data/diary.csv")
+    st.write(diary_data)
+else:
+    st.write("No diary entries found.")
 
 
 st.sidebar.header("Menu")
