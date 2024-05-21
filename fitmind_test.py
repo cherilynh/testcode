@@ -5,17 +5,24 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import random
 
-st.sidebar.header("Menu")
-page = st.sidebar.radio("Choose what you need",["FitMind - Introduction", "Fitness", "Mental Health"])
+# Functions
 
-if page == "FitMind - Introduction":
+def showpage(pagename):
+    if pagename =="Fitness":
+        showpageFitness
+    elif pagename =="FitMind - Introduction":
+        showpageIntro
+    elif pagename =="Mental Health":
+        showpageMentalHealth
+ 
+def showpageIntro():
     st.title("Welcome to FitMind!")
     st.markdown("""
     FitMind is a health app that combines fitness and mental wellbeing to help users lead a balanced and healthy life.
     """)
     st.write("FitMind helps you to achieve your fitness goals and improve your mental well-being at the same time.")
 
-elif page == "Fitness":
+def showpageFitness():
     st.title("Fitness")
     st.subheader("Choose your level")
     st.subheader(":green[Beginners]")
@@ -1115,9 +1122,7 @@ elif page == "Fitness":
         st.write("BMI-Klassifikation:")
         st.dataframe(data)
 
-
-
-elif page == "Mental Health":
+def showpageMentalHealth():
     st.sidebar.subheader("Mental Health Subcategories")
     Mental_Health_Subcategories = [" ", "Stress & Mood Tracker", "Sleep tracker", "Supplements"]
     selected_subcategory = st.sidebar.selectbox("Choose a tracker", Mental_Health_Subcategories)
@@ -1200,6 +1205,17 @@ elif page == "Mental Health":
             st.write("https://www.avogel-company.ch/img/client/av3-packshots-deutsch/2020_Hyperiforce_120T_CH_d.png?m=1608019976")
         st.divider()
 
+st.sidebar.header("Menu")
+page = st.sidebar.radio("Choose what you need",["FitMind - Introduction", "Fitness", "Mental Health"])
+
+if page == "FitMind - Introduction":
+    showpage(page)
+
+elif page == "Fitness":
+    showpage(page)
+
+elif page == "Mental Health":
+    showpage(page)
   
        
 
@@ -1211,3 +1227,10 @@ st.sidebar.info("This app was developed by Julia and Cherilyn.")
 st.sidebar.subheader("Contact")
 st.sidebar.text("For questions or suggestions, contact us at")
 st.sidebar.text("fitmindbyjc@gmail.com")
+
+
+
+
+
+    
+    
