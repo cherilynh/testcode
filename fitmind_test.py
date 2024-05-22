@@ -1157,8 +1157,27 @@ elif page == "Mental Health":
         st.line_chart(mood_data.set_index('Datum'))
     
     elif selected_subcategory == "Sleep tracker":
-        st.write("track your sleeping hours")
+        st.subheader("Track your sleep")
+        st.write("Enter your sleep duration and quality for each day.")
 
+        # Input Widgets
+        sleep_quality = st.slider("Sleep Quality (0-10)", 0, 10, 5)
+        sleep_duration = st.slider("Sleep Duration (Hours)", 0, 24, 8)
+
+        # Save Button
+        if st.button("Save"):
+        # Hier kannst du den Code zum Speichern der Daten implementieren
+            st.write("Sleep data saved successfully!")
+        
+        # Chart elements
+        sleep_data = pd.DataFrame({
+            'Date': pd.date_range(start='2024-05-01', periods=10),
+            'Sleep Quality': np.random.randint(0, 11, size=10),
+            'Sleep Duration': np.random.randint(0, 24, size=10)
+        })
+
+        st.write("Sleep Quality and Duration Trends:")
+        st.line_chart(sleep_data.set_index('Date'))
 
     elif selected_subcategory == "Supplements":
         st.title("Supplements to support your mental health")
