@@ -1,0 +1,200 @@
+{
+  "exercises": {
+    "Arms": [
+      {
+        "name": "Arm Circles",
+        "instructions": "",
+        "video": "https://youtu.be/UVMEnIaY8aU"
+      },
+      {
+        "name": "Bicep Curls",
+        "instructions": "",
+        "video": "https://youtu.be/TVflFTempWA?t=20"
+      },
+      {
+        "name": "Chair Dips",
+        "instructions": "",
+        "video": "https://youtu.be/HCf97NPYeGY"
+      },
+      {
+        "name": "Isometric Bicep Hold",
+        "instructions": [
+          "Hold dumbbells in each hand. If you do not have dumbbells, use full water bottles.",
+          "Keep your elbows close to your torso and your palms facing up. Keeping your upper body stationary, bring the weights to a 90 degrees hold.",
+          "Hold for a minimum of 5 seconds or other given time."
+        ],
+        "video": "https://youtu.be/0GYXknAKa8g"
+      },
+      {
+        "name": "Plank Shoulder Taps",
+        "instructions": "",
+        "video": "https://youtu.be/8rgurWd-PB8"
+      },
+      {
+        "name": "Reverse Plank",
+        "instructions": "",
+        "video": "https://youtu.be/v2pPWNSDorE"
+      },
+      {
+        "name": "Walking Plank",
+        "instructions": "",
+        "video": "https://youtu.be/0EePC0_n6J4"
+      },
+      {
+        "name": "Push-Ups",
+        "instructions": "",
+        "video": "https://youtu.be/NE96m3TvI2o"
+      },
+      {
+        "name": "Diamond Push-Ups",
+        "instructions": "",
+        "video": "https://youtu.be/XtU2VQVuLYs"
+      },
+      {
+        "name": "Decline Push-Ups",
+        "instructions": "",
+        "video": "https://youtu.be/QBlYp-EwHlo"
+      },
+      {
+        "name": "Incline Push-Ups",
+        "instructions": "",
+        "video": "https://youtu.be/yAbg3_pJKvw"
+      },
+      {
+        "name": "Plank to Push-Ups",
+        "instructions": "",
+        "video": "https://youtu.be/56vUOad6Irs"
+      },
+      {
+        "name": "Wall Push-Ups",
+        "instructions": "",
+        "video": "https://youtu.be/-KVhapnEtuk"
+      }
+    ],
+    "Back": [],
+    "Core": [
+{
+        "name": "Boat Pose",
+        "instructions": [
+          "Sit on the floor with your legs extended in front of you. Keep your spine tall and your hands resting on the floor beside your hips for support.",
+          "As you exhale, lean back slightly and lift your feet off the ground. Your torso and legs should form a V shape.",
+          "Balance on your glutes while keeping your spine straight. Avoid rounding your back; instead, imagine lengthening through the crown of your head.",
+          "Extend your arms straight out in front of you, parallel to the floor, with your palms facing each other. Alternatively, you can hold onto the backs of your thighs for additional support, especially if you're a beginner.",
+          "Take deep breaths in and out as you hold the pose. Aim to maintain steady, even breaths to help you stay focused and relaxed.",
+          "Hold the pose for as long as you feel comfortable, aiming for 10-30 seconds to start. As you become more experienced, you can gradually increase the duration of your hold.",
+          "To release the pose, exhale as you lower your feet back to the floor, returning to a seated position with your legs extended.",
+          "Repeat exercise."
+        ],
+        "video": "https://youtu.be/VN-6jygZ094"
+      },
+      {
+        "name": "Crunches",
+        "instructions": [
+          "Lie down on the floor with your knees bent and your feet planted hip-width apart.",
+          "Place your hands crossing over your chest OR with your elbows out wide with your hands behind your head, with your fingers grazing your ears.",
+          "Relax your shoulders and keep your gaze neutral and tuck your chin slightly towards your chest.",
+          "Inhale, drawing your abdomen in towards your spine. Exhale and lift your head, neck and shoulder blades off the floor, curling inwards.",
+          "Repeat exercise."
+        ],
+        "video": "https://youtu.be/nt9jwky07jc"
+      },
+      {
+        "name": "Bicycle Crunches",
+        "instructions": [
+          "Lie down on the floor with your knees bent and your feet planted hip-width apart.",
+          "Place your hands gently on your head with your elbows out wide, with your fingers grazing your ears.",
+          "Lift one leg off the ground and straighten it outwards, raising the opposite knee upwards towards your chest.",
+          "Lift your chest upwards and turn your torso—opposite elbow to opposite knee.",
+          "Lower back to a neutral position with your knees raised. Switch to the other side—opposite elbow and opposite knee.",
+          "Repeat exercise."
+        ],
+        "video": "https://youtu.be/cbKIDZ_XyjY"
+      },
+      {
+        "name": "Reverse Crunches",
+        "instructions": [
+          "Lie down on the floor with your knees bent and your feet planted hip-width apart.",
+          "Place your hands on the floor by your side.",
+          "Inhale, contract your abs towards your spine.",
+          "Exhale and lift your feet off the floor and raise your knees upwards and inwards towards your chest, keeping your knees at a 90 degree angle. Your hips should tilt inwards to crunch your abs.",
+          "Repeat exercise."
+        ],
+        "video": "https://youtu.be/XY8KzdDcMFg"
+      },
+      {
+        "name": "Standing Oblique Crunches",
+        "instructions": [
+          "Stand with your knees slightly bent, your feet hip-width apart, and your hands behind your head.",
+          "Shift your weight to the left leg, crunch to the right side, and bring your right knee up toward your elbow.",
+          "Lower your right leg and return to the starting position.",
+          "Switch sides.",
+          "Repeat exercise."
+        ],
+        "video": "https://youtu.be/j12PC1m6va4"
+      },
+      {
+        "name": "Flutter Kicks",
+        "instructions": [
+          "Lay on your back, extending your legs at a 45-degree angle. Your arms should be down at your sides and your legs off the ground.",
+          "Lift your head, shoulders, and neck slightly off the ground.",
+          "Start kicking your legs up and down, alternating as you go. Flutter your legs at a pace you can maintain whilst also keeping your core still.",
+          "Flutter as long as possible."
+        ],
+        "video": "https://youtu.be/ZB1SwBRVLCc"
+      },
+      {
+        "name": "Lying Leg Raises",
+        "instructions": [
+          "Lay supine in a relaxed position with your legs straight and your hands underneath your low back for support.",
+          "Keep your legs straight and raise them towards your forehead while contracting your abdominals and exhaling.",
+          "Once your abs are fully contracted and your legs are slightly above parallel, slowly lower your legs back to the starting position.",
+          "Repeat exercise."
+        ],
+        "video": "https://youtu.be/Wp4BlxcFTkE"
+      },
+      {
+        "name": "Mountain Climbers",
+        "instructions": [
+          "Get into a plank position, making sure to distribute your weight evenly between your hands and your toes.",
+          "Check your form—your hands should be about shoulder-width apart, back flat, abs engaged, and head in alignment.",
+          "Pull your right knee into your chest as far as you can.",
+          "Switch legs, pulling one knee out and bringing the other knee in.",
+          "Keep your hips down and run your knees in and out as far and as fast as you can. Alternate inhaling and exhaling with each leg change.",
+          "Repeat as long as possible."
+        ],
+        "video": "https://youtu.be/kLh-uczlPLg"
+      },
+      {
+        "name": "Planks",
+        "instructions": [
+          "Start in a tabletop position on your hands and knees, then lower down to your forearms with your elbows stacked beneath your shoulders.",
+          "Step your feet back until your body makes a line from shoulders to heels.",
+          "Squeeze your core and think about pulling your belly button towards your sternum to engage the abs.",
+          "Hold the position for as long as possible."
+        ],
+        "video": "https://youtu.be/q4rDeHYMcIg"
+      },
+      {
+        "name": "Side Planks",
+        "instructions": [
+          "Lie on your side, legs extended and stacked.",
+          "Place your elbow under your shoulder and lift your hips to form a straight line.",
+          "Hold this position for 30 seconds or longer.",
+          "Switch sides."
+        ],
+        "video": "https://youtu.be/0Rl5ZQwmS-o"
+      },
+      {
+        "name": "Russian Twists",
+        "instructions": [
+          "Sit on the floor or mat with your knees bent and feet flat on the ground.",
+          "Sitting up, angle your upper body 45 degrees backward. Keep your back neutral and your shoulders in their natural position in order to maintain good posture and avoid strain.",
+	  "Gently lift your feet a few inches off the ground, being sure to keep your back neutral and at a 45-degree angle throughout.",
+	  "Rotate your arms to one side of your body, and then rotate them to the opposite side."
+	],
+	"video": "https://youtu.be/VfWoNC-NMII"
+       }
+    "Glutes": [],
+    "Legs": []
+  }
+}
