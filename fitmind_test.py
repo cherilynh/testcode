@@ -1229,11 +1229,8 @@ elif page == "Mental Health":
             st.image("Hyperiforce.png")
             st.write("https://www.avogel-company.ch/img/client/av3-packshots-deutsch/2020_Hyperiforce_120T_CH_d.png?m=1608019976")
         st.divider()
-
-  
-       
-
-# Footer
+        
+ # Footer
 st.sidebar.markdown("---")
 st.sidebar.subheader("About us")
 st.sidebar.info("This app was developed by Julia and Cherilyn.")
