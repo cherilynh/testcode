@@ -5,6 +5,17 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import random
 
+def display_exercise_info(exercise_name, instructions, video_url):
+    st.subheader(exercise_name)
+    with st.expander(":information_source: Read Instructions"):
+        for instruction in instructions:
+            st.write(instruction)
+    if video_url:
+        with st.expander(":video_camera: Watch Video"):
+            st.video(video_url)
+            st.write(f"Video Source: {video_url}")
+    st.divider()
+
 st.sidebar.header("Menu")
 page = st.sidebar.radio("Choose what you need",["FitMind - Introduction", "Fitness", "Mental Health"])
 
@@ -1145,19 +1156,25 @@ elif page == "Mental Health":
         st.write("Verlauf der Stimmung und des Stresslevels:")
         st.line_chart(mood_data.set_index('Datum'))
     
-    elif selected_subcategory == "Sleep tracker":
+    elif selected_subcategory == "Sleep Tracker":
         st.subheader("Track your sleep")
         st.write("Enter your sleep duration and quality for each day.")
 
         # Input Widgets
-        sleep_quality = st.slider("Sleep Quality (0-10)", 0, 10, 5)
-        sleep_duration = st.slider("Sleep Duration (Hours)", 0, 24, 8)
+        st.session_state.sleep_quality = st.slider("Sleep Quality (0-10)", 0, 10, 5)
+        st.session_state.sleep_duration = st.slider("Sleep Duration (Hours)", 0, 24, 8)
 
         # Save Button
         if st.button("Save"):
-        # Hier kannst du den Code zum Speichern der Daten implementieren
+            save_data()
             st.write("Sleep data saved successfully!")
-        
+
+        # Display the saved data
+        if st.session_state.saved_data:
+            st.write("Saved Sleep Data:")
+            df = pd.DataFrame(st.session_state.saved_data)
+            st.write(df)
+    
         # Chart elements
         sleep_data = pd.DataFrame({
             'Date': pd.date_range(start='2024-05-01', periods=10),
@@ -1167,8 +1184,6 @@ elif page == "Mental Health":
 
         st.write("Sleep Quality and Duration Trends:")
         st.line_chart(sleep_data.set_index('Date'))
-
-
 
     elif selected_subcategory == "Supplements":
         st.title("Supplements to support your mental health")
