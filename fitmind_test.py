@@ -1156,10 +1156,24 @@ elif page == "Mental Health":
         st.write("Verlauf der Stimmung und des Stresslevels:")
         st.line_chart(mood_data.set_index('Datum'))
     
-    elif selected_subcategory == "Sleep tracker":
+    elif selected_subcategory == "Sleep Tracker":
         st.subheader("Track your sleep")
         st.write("Enter your sleep duration and quality for each day.")
 
+        # Input Widgets
+        st.session_state.sleep_quality = st.slider("Sleep Quality (0-10)", 0, 10, 5)
+        st.session_state.sleep_duration = st.slider("Sleep Duration (Hours)", 0, 24, 8)
+
+        # Save Button
+        if st.button("Save"):
+            save_data()
+            st.write("Sleep data saved successfully!")
+
+        # Display the saved data
+        if st.session_state.saved_data:
+            st.write("Saved Sleep Data:")
+            df = pd.DataFrame(st.session_state.saved_data)
+            st.write(df)
         # Input Widgets
         sleep_quality = st.slider("Sleep Quality (0-10)", 0, 10, 5)
         sleep_duration = st.slider("Sleep Duration (Hours)", 0, 24, 8)
