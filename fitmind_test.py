@@ -934,7 +934,7 @@ elif page == "Fitness":
             "Prone T Raises",
             "Prone W Raises",
             "Prone Y Raises",
-            "REverse Snow Angels",
+            "Reverse Snow Angels",
             "Seated Forward Folds",
             "Supermans",
             "Swimmers"
@@ -1015,7 +1015,6 @@ elif page == "Fitness":
         glutes_fitness_übungen = [
             "Bridge for 30 seconds",
             "Clamshells",
-            "Donkey Kicks",
             "Donkey Kicks",
             "Fire Hydrants",
             "Glute Bridges",
@@ -1187,41 +1186,41 @@ elif page == "Fitness":
             "Bicep Curls",
             "Chair Dips",
             "Isometric Dips",
-            "Plank Shoulder Taps"
-            "Reverse Plank"
-            "Walking Plank"
-            "Push-Ups"
-            "Diamond Push-Ups"
-            "Decline Push-Ups"
-            "Incline Push-Ups"
-            "Plank to Push-Ups"
-            "Wall Push-Ups"
-            "Bird Dogs"
-            "Cat Camel Stretch"
-            "Cobra Pose"
-            "Dive Bombers"
-            "Prone T Raises"
-            "Prone W Raises"
-            "Prone Y Raises"
-            "Reverse Snow Angels"
-            "Seated Forward Folds"
-            "Supermans"
-            "Swimmers"
-            "Boat pose"
-            "Crunches"
-            "Bicycle Crunches"
-            "Reverse Crunches"
-            "Standing Oblique Crunches"
-            "Flutter Kicks"
-            "Lying Leg Raises"
-            "Mountain Climbers"
-            "Planks"
-            "Side Planks"
-            "Russian Twists"
-            "Scissor Kicks"
-            "Seated Knee Tucks"
-            "Sit-ups"
-            "Toe Touches"
+            "Plank Shoulder Taps",
+            "Reverse Plank",
+            "Walking Plank",
+            "Push-Ups",
+            "Diamond Push-Ups",
+            "Decline Push-Ups",
+            "Incline Push-Ups",
+            "Plank to Push-Ups",
+            "Wall Push-Ups",
+            "Bird Dogs",
+            "Cat Camel Stretch",
+            "Cobra Pose",
+            "Dive Bombers",
+            "Prone T Raises",
+            "Prone W Raises",
+            "Prone Y Raises",
+            "Reverse Snow Angels",
+            "Seated Forward Folds",
+            "Supermans",
+            "Swimmers",
+            "Boat pose",
+            "Crunches",
+            "Bicycle Crunches",
+            "Reverse Crunches",
+            "Standing Oblique Crunches",
+            "Flutter Kicks",
+            "Lying Leg Raises",
+            "Mountain Climbers",
+            "Planks",
+            "Side Planks",
+            "Russian Twists",
+            "Scissor Kicks",
+            "Seated Knee Tucks",
+            "Sit-ups",
+            "Toe Touches",
             "V-ups"
 
         ]
