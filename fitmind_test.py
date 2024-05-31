@@ -953,7 +953,7 @@ elif page == "Fitness":
         
         with tab2:
            st.header(":orange[Intermediate Training]")
-           st.write("Here are 8 randomized exercises for your arms. Do 3-4 sets with each 10 repetitions. Take a break of 45 Seconds in between the exercises.")
+           st.write("Here are 8 randomized exercises for your back. Do 3-4 sets with each 10 repetitions. Take a break of 45 Seconds in between the exercises.")
            zufällige_übungen_intermediate = random.sample(back_fitness_übungen, 8)
            for übung in zufällige_übungen_intermediate:
                st.write(übung)
