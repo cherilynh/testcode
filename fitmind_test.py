@@ -968,28 +968,23 @@ elif page == "Fitness":
         
     elif second_subcategory == "Core":
         core_fitness_übungen = [
-            "Ab Rollouts",
             "Bicycle Crunches",
             "Boat pose",
             "Crunches",
             "Flutter Kicks",
-            "Hanging Leg Raises",
-            "Jackknife Sit-ups",
-            "Leg Raises",
+            "Lying Leg Raises",
             "Mountain Climbers",
             "Plank for 30 Seconds",
             "Reverse Crunches",
             "Russian Twists",
             "Scissor Kicks",
             "Seated Knee Tucks",
-            "Seated Leg Tugs",
             "Side Planks",
             "Sit-ups",
             "Standing Oblique Crunches",
             "Toe Touches",
             "V-ups"
         ]
-
         
         st.subheader("Randomized Core Workout")
 
@@ -1187,18 +1182,72 @@ elif page == "Fitness":
                 st.write(übung)
                 
     elif second_subcategory == "Upper Body":
+        Upper_Body_fitness_übungen = [
+            "Arm Circles",
+            "Bicep Curls",
+            "Chair Dips",
+            "Isometric Dips",
+            "Plank Shoulder Taps"
+            "Reverse Plank"
+            "Walking Plank"
+            "Push-Ups"
+            "Diamond Push-Ups"
+            "Decline Push-Ups"
+            "Incline Push-Ups"
+            "Plank to Push-Ups"
+            "Wall Push-Ups"
+            "Bird Dogs"
+            "Cat Camel Stretch"
+            "Cobra Pose"
+            "Dive Bombers"
+            "Prone T Raises"
+            "Prone W Raises"
+            "Prone Y Raises"
+            "Reverse Snow Angels"
+            "Seated Forward Folds"
+            "Supermans"
+            "Swimmers"
+            "Boat pose"
+            "Crunches"
+            "Bicycle Crunches"
+            "Reverse Crunches"
+            "Standing Oblique Crunches"
+            "Flutter Kicks"
+            "Lying Leg Raises"
+            "Mountain Climbers"
+            "Planks"
+            "Side Planks"
+            "Russian Twists"
+            "Scissor Kicks"
+            "Seated Knee Tucks"
+            "Sit-ups"
+            "Toe Touches"
+            "V-ups"
+
+        ]
         st.subheader("Randomized Upper Body Workout")
 
         tab1, tab2, tab3 = st.tabs([":green-background[Beginner]", ":orange-background[Intermediate]", ":red-background[Advanced]"])
 
         with tab1:
            st.header(":green[Beginner Training]")
-        
+           st.write("Here are 5 randomized exercises for your upper body. Do 1-2 sets with each 10 repetitions. Take a break of 60 Seconds in between the exercises.")
+           zufällige_übungen_beginner = random.sample(Upper_Body_fitness_übungen, 5)
+           for übung in zufällige_übungen_beginner:
+               st.write(übung)        
         with tab2:
            st.header(":orange[Intermediate Training]")
+           st.write("Here are 8 randomized exercises for your upper body. Do 3-4 sets with each 10 repetitions. Take a break of 45 Seconds in between the exercises.")
+           zufällige_übungen_beginner = random.sample(Upper_Body_fitness_übungen, 8)
+           for übung in zufällige_übungen_beginner:
+               st.write(übung)
         
         with tab3:
            st.header(":red[Advanced Training]")
+           st.write("Here are 11 randomized exercises for your upper body. Do 5-6 sets with each 10 repetitions. Take a break of 30 Seconds in between the exercises.")
+           zufällige_übungen_beginner = random.sample(Upper_Body_fitness_übungen, 11)
+           for übung in zufällige_übungen_beginner:
+               st.write(übung)
 
     elif second_subcategory == "Full Body":
         st.subheader("Randomized Full Body Workout")
@@ -1215,7 +1264,7 @@ elif page == "Fitness":
            st.header(":red[Advanced Training]")
             
     st.sidebar.subheader("Fitness Tracker")
-    third_subcategory = st.sidebar.selectbox("Choose a Fitness Tracker", ["  ", "water intake", "Workout tracker", "BMI-Calculator"])
+    third_subcategory = st.sidebar.selectbox("Choose a Fitness Tracker", ["  ", "water intake", "BMI-Calculator"])
     
     if third_subcategory == " ":
         st.write(" ")
@@ -1236,26 +1285,6 @@ elif page == "Fitness":
             st.write("You drank a glass of water! :droplet:")
             st.write("Total glasses of water drank today:", st.session_state.water_intake)
 
-    elif third_subcategory == "Workout tracker":
-        st.subheader("Workout tracker")
-        st.write("Define your Goals here. write down what you achieved")
-        
-        diary_data = pd.read_csv("diary.csv") if "diary.csv" in st.session_state else pd.DataFrame(columns=["Date", "Entry"])
-            
-        st.subheader("Diary")
-        entry_date = st.date_input("Date", value=pd.Timestamp.now())
-        entry_text = st.text_area("Enter your diary entry")
-            
-        if st.button("Save Entry"):
-            diary_data = diary_data.append({"Date": entry_date, "Entry": entry_text}, ignore_index=True)
-            diary_data.to_csv("diary.csv", index=False)
-            st.success("Entry saved successfully!")
-            
-        if not diary_data.empty:
-            st.subheader("Previous Entries")
-            st.write(diary_data)
-        else:
-             st.info("No entries yet.")
             
     elif third_subcategory == "BMI-Calculator":
         st.subheader("BMI-Calculator")
