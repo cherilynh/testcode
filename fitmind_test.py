@@ -212,7 +212,7 @@ elif page == "Fitness":
         col1, col2 = st.columns(2)
         with col1:
            st.subheader("Benefits")
-           st.write(" ")
+           st.write("Back training improves posture, reducing the risk of back pain and injuries. It enhances functional strength for daily activities and sports, promoting overall physical performance. Additionally, a strong back contributes to a balanced physique and better core stability.")
        
         with col2:
            st.subheader("used Muscles")
@@ -220,28 +220,84 @@ elif page == "Fitness":
            st.write("Image Source: https://www.gorillasports.de/magazin/wp-content/uploads/2020/02/Rückenmuskulatur-Gorilla-Sports-Magazin.jpg")
         st.divider()
 
-        st.subheader("")
+        st.subheader("Bird Dogs")
         with st.expander(":information_source: Read Instructions"):
             st.write("")
         with st.expander(":video_camera: Watch Video"):
-            st.video('')
-            st.write("Video Source: ")
+            st.video('https://youtu.be/vzU5xrs1gMQ')
+            st.write("Video Source: https://youtu.be/vzU5xrs1gMQ")
         st.divider()
 
-        st.subheader("")
+        st.subheader("Cat Camel Stretch")
         with st.expander(":information_source: Read Instructions"):
             st.write("")
         with st.expander(":video_camera: Watch Video"):
-            st.video('')
-            st.write("Video Source: ")
+            st.video('https://youtu.be/c2kKOjpzK14')
+            st.write("Video Source: https://youtu.be/c2kKOjpzK14")
         st.divider()
 
-        st.subheader("")
+        st.subheader("Cobra Pose")
         with st.expander(":information_source: Read Instructions"):
             st.write("")
         with st.expander(":video_camera: Watch Video"):
-            st.video('')
-            st.write("Video Source: ")
+            st.video('https://youtu.be/JDcdhTuycOI')
+            st.write("Video Source: https://youtu.be/JDcdhTuycOI")
+        st.divider()
+
+        st.subheader("Prone T Raises")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/3GJoiYUYwr0')
+            st.write("Video Source: https://youtu.be/3GJoiYUYwr0")
+        st.divider()
+        
+        st.subheader("Prone W Raises")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/EJpwME9qcEI')
+            st.write("Video Source: https://youtu.be/EJpwME9qcEI")
+        st.divider()
+
+        st.subheader("Prone Y Raises")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/w1AWGKubE5U')
+            st.write("Video Source: https://youtu.be/w1AWGKubE5U")
+        st.divider()
+        
+        st.subheader("Reverse Snow Angels")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/8tQUrvafTdg')
+            st.write("Video Source: https://youtu.be/8tQUrvafTdg")
+        st.divider()
+
+        st.subheader("Seated Forward Folds")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/xwGv90wpgKU')
+            st.write("Video Source: https://youtu.be/xwGv90wpgKU")
+        st.divider()
+
+        st.subheader("Supermans")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/z6PJMT2y8GQ')
+            st.write("Video Source: https://youtu.be/z6PJMT2y8GQ")
+        st.divider()
+
+        st.subheader("Swimmers")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/nzzn3YbFp2w')
+            st.write("Video Source: https://youtu.be/nzzn3YbFp2w")
         st.divider()
     
     elif selected_subcategory == "Core":
