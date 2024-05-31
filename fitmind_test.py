@@ -58,7 +58,7 @@ elif page == "Fitness":
         col1, col2 = st.columns(2)
         with col1:
            st.subheader("Benefits")
-           st.write(" ")
+           st.write("Arm training increases muscle strength, improves functional performance in daily tasks, and enhances athletic performance. Additionally, it improves aesthetics by toning muscles and helps prevent injuries by supporting joints, tendons, and ligaments.")
        
         with col2:
            st.subheader("used Muscles")
