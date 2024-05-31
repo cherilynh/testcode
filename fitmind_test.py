@@ -874,18 +874,45 @@ elif page == "Fitness":
 
     
     elif second_subcategory == "Arms":
+            arms_fitness_übungen = [
+            "Arm Circles",
+            "Bicep Curls",
+            "Chair Dips",
+            "Isometric Bicep Hold",
+            "Plank Shoulder Taps",
+            "Reverse Plank",
+            "Walking Plank",
+            "Push-Ups",
+            "Diamond Push-Ups",
+            "Decline Push-Ups",
+            "Incline Push-Ups",
+            "Plank to Push-Ups",
+            "Wall Push-Ups"
+        ]
+
         st.subheader("Randomized Arm Workout")
 
         tab1, tab2, tab3 = st.tabs([":green-background[Beginner]", ":orange-background[Intermediate]", ":red-background[Advanced]"])
 
         with tab1:
            st.header(":green[Beginner Training]")
-        
+           st.write("Here are 5 randomized exercises for your arms. Do 1-2 sets with each 10 repetitions. Take a break of 60 Seconds in between the exercises.")
+           zufällige_übungen_beginner = random.sample(arms_fitness_übungen, 5)
+           for übung in zufällige_übungen_beginner:
+               st.write(übung)
         with tab2:
            st.header(":orange[Intermediate Training]")
+           st.write("Here are 8 randomized exercises for your arms. Do 3-4 sets with each 10 repetitions. Take a break of 45 Seconds in between the exercises.")
+           zufällige_übungen_intermediate = random.sample(arms_fitness_übungen, 8)
+           for übung in zufällige_übungen_intermediate:
+               st.write(übung)
         
         with tab3:
            st.header(":red[Advanced Training]")
+           st.write("Here are 11 randomized exercises for your arms. Do 4-5 sets with each 10 repetitions. Take a break of 30 Seconds in between the exercises.")
+           zufällige_übungen_advanced = random.sample(arms_fitness_übungen, 11)
+           for übung in zufällige_übungen_advanced:
+               st.write(übung)
             
 
     elif second_subcategory == "Back":
@@ -895,9 +922,11 @@ elif page == "Fitness":
 
         with tab1:
            st.header(":green[Beginner Training]")
+
         
         with tab2:
            st.header(":orange[Intermediate Training]")
+
         
         with tab3:
            st.header(":red[Advanced Training]")
