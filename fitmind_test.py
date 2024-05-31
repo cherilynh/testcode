@@ -1017,13 +1017,12 @@ elif page == "Fitness":
             "Clamshells",
             "Donkey Kicks",
             "Fire Hydrants",
-            "Glute Bridges",
             "Hip Thrusts",
-            "Forward Lunges",
+            "Lunges",
             "Reverse Lunges",
             "Lateral Lunges",
             "Walking Lunges",
-            "Quadruped Leg Lifts",
+            "Quadruped Leg Raises",
             "Quadruped Hip Extensions",
             "Side Leg Raises",
             "Single-Leg Glute Bridges",
@@ -1031,9 +1030,9 @@ elif page == "Fitness":
             "Bulgarian Split Squats",
             "Sumo Squats",
             "Plie Squats",
-            "Standing Leg Abduction",
             "Standing Kickbacks",
-            "Wall Sit"
+            "Wall Sit",
+            "Wall Sit With Leg Lifts"
         ]
 
         st.subheader("Randomized Glutes Workout")
@@ -1064,8 +1063,6 @@ elif page == "Fitness":
     elif second_subcategory == "Legs":
         st.subheader("Randomized Leg Workout")
         legs_fitness_übungen = [
-            "Alternating Stance Jumps",
-            "Boxer Shuffle",
             "Butt Kicks",
             "Flutter Kicks",
             "Half Squat walk",
@@ -1077,12 +1074,10 @@ elif page == "Fitness":
             "Marching Hip Raises",
             "Pulsing Side Lying Leg Raises",
             "Rainbow Leg Lifts",
-            "Side And Cross Crunches",
             "Side Knee Raises",
             "Side Lying Bottom Leg Lifts",
-            "Side Lying Leg Raises",
+            "Side Lying Leg Lifts",
             "Single Leg V-Ups",
-            "Straight Leg Circles",
             "Walking High Knees",
         ]
                 
@@ -1252,18 +1247,107 @@ elif page == "Fitness":
 
     elif second_subcategory == "Full Body":
         st.subheader("Randomized Full Body Workout")
+        st.write("This randomized lower body workout contains exercises for your arms, back, core, glutes and legs.")
+        Full_Body_fitness_übungen = [
+            "Arm Circles",
+            "Bicep Curls",
+            "Chair Dips",
+            "Isometric Dips",
+            "Plank Shoulder Taps",
+            "Reverse Plank",
+            "Walking Plank",
+            "Push-Ups",
+            "Diamond Push-Ups",
+            "Decline Push-Ups",
+            "Incline Push-Ups",
+            "Plank to Push-Ups",
+            "Wall Push-Ups",
+            "Bird Dogs",
+            "Cat Camel Stretch",
+            "Cobra Pose",
+            "Dive Bombers",
+            "Prone T Raises",
+            "Prone W Raises",
+            "Prone Y Raises",
+            "Reverse Snow Angels",
+            "Seated Forward Folds",
+            "Supermans",
+            "Swimmers",
+            "Boat pose",
+            "Crunches",
+            "Bicycle Crunches",
+            "Reverse Crunches",
+            "Standing Oblique Crunches",
+            "Flutter Kicks",
+            "Lying Leg Raises",
+            "Mountain Climbers",
+            "Planks",
+            "Side Planks",
+            "Russian Twists",
+            "Scissor Kicks",
+            "Seated Knee Tucks",
+            "Sit-ups",
+            "Toe Touches",
+            "V-ups",
+            "Bridge",
+            "Bulgarian Split Squats",
+            "Clamshells",
+            "Donkey Kicks",
+            "Fire Hydrants",
+            "Hip Thrusts",
+            "Lateral Lunges",
+            "Lunges",
+            "Plie Squats",
+            "Quadruped Hip Extensions",
+            "Quadruped Leg Raise",
+            "Reverse Lunges",
+            "Side Leg Raises",
+            "Single-Leg Glute Bridges",
+            "Squats",
+            "Standing Kickbacks",
+            "Sumo Squats",
+            "Walking Lunges",
+            "Wall Sit",
+            "Wall Sit with Leg Lifts"
+            "Butt Kicks",
+            "Flutter Kicks",
+            "Half Squat Walk",
+            "High Kicks",
+            "Jumping Jack",
+            "Knee Side Leg Lifts",
+            "Lateral Hops",
+            "Lying Leg Circles",
+            "Marching Hip Raises",
+            "Pulsing Side Lying Leg Raises",
+            "Rainbow Leg Lifts",
+            "Standing Knee Raises",
+            "Side Lying Leg Lifts",
+            "Single Leg V-Ups",
+            "Walking High Knees"
+
+
+        ]
 
         tab1, tab2, tab3 = st.tabs([":green-background[Beginner]", ":orange-background[Intermediate]", ":red-background[Advanced]"])
 
         with tab1:
            st.header(":green[Beginner Training]")
-        
+           st.write("Here are 5 randomized exercises for your whole body. Do 1-2 sets with each 10 repetitions. Take a break of 60 Seconds in between the exercises.")
+           zufällige_übungen_beginner = random.sample(Full_Body_fitness_übungen, 5)
+           for übung in zufällige_übungen_beginner:
+               st.write(übung)         
         with tab2:
            st.header(":orange[Intermediate Training]")
-        
+           st.write("Here are 8 randomized exercises for your whole body. Do 3-4 sets with each 10 repetitions. Take a break of 45 Seconds in between the exercises.")
+           zufällige_übungen_beginner = random.sample(Full_Body_fitness_übungen, 8)
+           for übung in zufällige_übungen_beginner:
+               st.write(übung)        
         with tab3:
            st.header(":red[Advanced Training]")
-            
+           st.write("Here are 11 randomized exercises for your whole body. Do 5-6 sets with each 10 repetitions. Take a break of 30 Seconds in between the exercises.")
+           zufällige_übungen_beginner = random.sample(Full_Body_fitness_übungen, 11)
+           for übung in zufällige_übungen_beginner:
+               st.write(übung)            
     st.sidebar.subheader("Fitness Tracker")
     third_subcategory = st.sidebar.selectbox("Choose a Fitness Tracker", ["  ", "water intake", "BMI-Calculator"])
     
