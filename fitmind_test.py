@@ -219,7 +219,7 @@ elif page == "Fitness":
            st.image("Back-Muscles-jpeg.webp")
            st.write("Image Source: https://samarpanphysioclinic.com/muscles-of-the-back/")
         st.divider()
-
+        
         st.subheader("Bird Dogs")
         with st.expander(":information_source: Read Instructions"):
             st.write("")
@@ -242,6 +242,14 @@ elif page == "Fitness":
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/JDcdhTuycOI')
             st.write("Video Source: https://youtu.be/JDcdhTuycOI")
+        st.divider()
+
+        st.subheader("Dive Bomber")
+        with st.expander(":information_source: Read Instructions"):
+            st.write("")
+        with st.expander(":video_camera: Watch Video"):
+            st.video('https://youtu.be/mvNcSF-nXg4')
+            st.write("Video Source: https://youtu.be/mvNcSF-nXg4")
         st.divider()
 
         st.subheader("Prone T Raises")
@@ -922,6 +930,7 @@ elif page == "Fitness":
             "Bird Dogs",
             "Cat Camel Stretch",
             "Cobra Pose",
+            "Dive Bomber",
             "Prone T Raises",
             "Prone W Raises",
             "Prone Y Raises",
