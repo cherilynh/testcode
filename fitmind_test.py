@@ -68,7 +68,10 @@ elif page == "Fitness":
 
         st.subheader("Arm Circles")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Stand straight with your feet shoulder-width apart.")
+            st.write("2. Raise and extend your arms to the sides without bending the elbows.")
+            st.write("3. Slowly rotate your arms forward, making small circles of about 1 foot in diameter.")
+            st.write("4. Complete a set in one direction and then switch, rotating backward.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/UVMEnIaY8aU')
             st.write("Video Source: https://youtu.be/UVMEnIaY8aU")
@@ -76,7 +79,10 @@ elif page == "Fitness":
 
         st.subheader("Bicep Curls")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Stand straight with a dumbbell or water bottles in each hand, your feet shoulder-width apart, and hands by your sides.")
+            st.write("2. Squeeze the biceps and lift the dumbbells. Keep the elbows close to your body and the upper arms stationary, only the forearms should move.")
+            st.write("3. Once the dumbbells are at shoulder level, slowly lower the arms to the starting position.")
+            st.write("4. Repeat.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/TVflFTempWA?t=20')
             st.write("Video Source: https://youtu.be/TVflFTempWA?t=20")
@@ -84,7 +90,10 @@ elif page == "Fitness":
 
         st.subheader("Chair Dips")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Sit on the edge of a bench or chair, hands supporting your weight.")
+            st.write("2. Position your feet away from the bench, legs straight and heels on the floor.")
+            st.write("3. Lower yourself until your upper arms are parallel to the ground, then push back up.")
+            st.write("4. Repeat exercise.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/HCf97NPYeGY')
             st.write("Video Source: https://youtu.be/HCf97NPYeGY")
@@ -102,7 +111,9 @@ elif page == "Fitness":
 
         st.subheader("Plank Shoulder Taps")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Start in a plank position, with your wrists under your shoulders and your feet hip-width apart.")
+            st.write("2. Touch your left shoulder with your right hand and return to plank position.")
+            st.write("3. Touch your right shoulder with your left hand and continue alternating sides until the set is complete.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/8rgurWd-PB8')
             st.write("Video Source: https://youtu.be/8rgurWd-PB8")
@@ -110,7 +121,9 @@ elif page == "Fitness":
 
         st.subheader("Reverse Plank")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Press into your palms and lift your hips and torso toward the ceiling. Look up to the ceiling during this move.")
+            st.write("2. Squeeze your core and pull your belly button back toward your spine.")
+            st.write("3. Lower your hips and torso back to the floor, returning to the starting position.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/v2pPWNSDorE')
             st.write("Video Source: https://youtu.be/v2pPWNSDorE")
@@ -118,7 +131,10 @@ elif page == "Fitness":
         
         st.subheader("Walking Plank")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Get into a forearm plank with your shoulders in line with your elbows and forearms parallel to each other on the ground.")
+            st.write("2. Pushing the ground with your right hand, straighten your right arm into a high plank, followed by your left arm.") 
+            st.write("3. Then, bring your right forearm back to the ground and then your left forearm.")
+            st.write("4. Repeat exercise.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/0EePC0_n6J4')
             st.write("Video Source: https://youtu.be/0EePC0_n6J4")
@@ -126,7 +142,10 @@ elif page == "Fitness":
 
         st.subheader("Push-Ups")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. With your legs extended back, place the hands below the shoulders, slightly wider than shoulder-width apart.")
+            st.write("2. Start bending your elbows and lower your chest until it’s just above the floor.")
+            st.write("3. Push back to the starting position.")
+            st.write("4. Repeat exercise.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/NE96m3TvI2o')
             st.write("Video Source: https://youtu.be/NE96m3TvI2o")
@@ -134,7 +153,9 @@ elif page == "Fitness":
 
         st.subheader("Diamond Push-Ups")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Get into a standard push-up position. Except this time move your hands together so that your thumbs are touching together and your index fingers are touching together, forming a diamond shape in the open area between your hands.")
+            st.write("2. Next, lower yourself down to the ground so that your chest almost touches your hands, pause, then push yourself back up.")
+            st.write("3. Repeat exercise.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/XtU2VQVuLYs')
             st.write("Video Source: https://youtu.be/XtU2VQVuLYs")
@@ -142,7 +163,10 @@ elif page == "Fitness":
 
         st.subheader("Decline Push-Ups")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Place a bench or chair horizontally behind you and place both hands on a yoga mat slightly wider than shoulder-width with your feet together on the bench behind you, resting on the balls of your feet.")
+            st.write("2. While maintaining a straight back and stabilising through your abdominals, bend your elbows and lower your torso towards the floor until your arms form two 90-degree angles.")
+            st.write("3. Push through your chest and extend your arms to lift your body back into starting position.")
+            st.write("Repeat exercise.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/QBlYp-EwHlo')
             st.write("Video Source: https://youtu.be/QBlYp-EwHlo")
@@ -150,7 +174,10 @@ elif page == "Fitness":
 
         st.subheader("Incline Push-Ups")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Place a bench horizontally in front of you and place both hands on the bench slightly further than shoulder-width apart with feet together on the floor behind you, resting on the balls of your feet.")
+            st.write("2. While maintaining a neutral spine, bend your elbows and lower your torso towards the bench until your arms form two 90-degree angles.")
+            st.write("3. Push through your chest and extend your elbows to lift your body back into the starting position.")
+            st.write("4. Repeat exercise.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/yAbg3_pJKvw')
             st.write("Video Source: https://youtu.be/yAbg3_pJKvw")
@@ -158,7 +185,11 @@ elif page == "Fitness":
 
         st.subheader("Plank to Push-Ups")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Start in a push up position with hands and elbows stacked under your shoulders, with your body in a straight line from shoulders to heels.")
+            st.write("2. Transition into a forearm plank by lowering down to rest on your forearms with elbows under the shoulders. Squeeze the abs to maintain a neutral spine.")
+            st.write("3. Hold the plank for around 5 seconds, then transition back into push up position while keeping your knees and hips off the floor.")
+            st.write("4. Bend at the elbows to lower your chest towards the floor to make a push up, make sure your arms stay close to your sides.")
+            st.write("5. Push back into the starting position and repeat exercise.")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/56vUOad6Irs')
             st.write("Video Source: https://youtu.be/56vUOad6Irs")
@@ -166,7 +197,11 @@ elif page == "Fitness":
 
         st.subheader("Wall Push-Ups")
         with st.expander(":information_source: Read Instructions"):
-            st.write("")
+            st.write("1. Stand with your feet a few feet away from a wall.")
+            st.write("2. Slowly bend your elbows and lower your chest toward the wall.")
+            st.write("3. Focus on keeping your body aligned as you pause in this position.")
+            st.write("4. Push through your hands and straighten your arms, returning to the starting position.")
+            st.write("5. Repeat exercise")
         with st.expander(":video_camera: Watch Video"):
             st.video('https://youtu.be/-KVhapnEtuk')
             st.write("Video Source: https://youtu.be/-KVhapnEtuk")
