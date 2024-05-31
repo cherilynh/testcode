@@ -874,7 +874,7 @@ elif page == "Fitness":
 
     
     elif second_subcategory == "Arms":
-            arms_fitness_übungen = [
+        arms_fitness_übungen = [
             "Arm Circles",
             "Bicep Curls",
             "Chair Dips",
