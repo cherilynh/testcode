@@ -1225,6 +1225,8 @@ elif page == "Fitness":
 
         ]
         st.subheader("Randomized Upper Body Workout")
+        st.write("This randomized lower body workout contains exercises for your arms, back and core.")
+
 
         tab1, tab2, tab3 = st.tabs([":green-background[Beginner]", ":orange-background[Intermediate]", ":red-background[Advanced]"])
 
