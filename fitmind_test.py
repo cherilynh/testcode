@@ -946,7 +946,6 @@ elif page == "Fitness":
 
         with tab1:
            st.header(":green[Beginner Training]")
-           st.header(":green[Beginner Training]")
            st.write("Here are 5 randomized exercises for your back. Do 1-2 sets with each 10 repetitions. Take a break of 60 Seconds in between the exercises.")
            zufällige_übungen_beginner = random.sample(back_fitness_übungen, 5)
            for übung in zufällige_übungen_beginner:
