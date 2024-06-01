@@ -100,7 +100,10 @@ elif page == "Fitness":
            st.write("Image Source: https://media.geeksforgeeks.org/wp-content/uploads/20240328112244/Diagram-of-arm-muscle.png")
         st.divider()
 
-       show_exercises_by_category(file_path,'Arms')          
+       if __name__ == "__main__":
+        file_path = 'exercises.json'
+        category = 'Arms'
+        show_exercises_by_category(file_path, category)      
     
     elif selected_subcategory == "Back":
         st.subheader("Back Training")
