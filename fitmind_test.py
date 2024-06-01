@@ -4,6 +4,7 @@ import numpy as np
 from datetime import datetime
 import matplotlib.pyplot as plt
 import random
+import json
 
 def display_exercise_info(exercise_name, instructions, video_url):
     st.subheader(exercise_name)
