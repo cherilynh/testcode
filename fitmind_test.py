@@ -99,8 +99,7 @@ elif page == "Fitness":
            st.image("arm-muscle.jpeg")
            st.write("Image Source: https://media.geeksforgeeks.org/wp-content/uploads/20240328112244/Diagram-of-arm-muscle.png")
         st.divider()
-
-        file_path = 'exercises.json'
+        
         category = 'Arms'
         show_exercises_by_category(file_path, category)      
     
