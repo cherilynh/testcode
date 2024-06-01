@@ -19,7 +19,7 @@ def show_exercises_by_category(file_path, category):
 
     # Überprüfen, ob Übungen gefunden wurden
     if not exercises:
-        st.write(f"Keine Übungen in der Kategorie '{category}' gefunden.")
+        st.write(f"No exercises found in the '{category}' category.")
         return
     
     # Anzeigen der gefilterten Übungen
