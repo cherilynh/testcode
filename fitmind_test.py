@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import random
 import json
 
+# Pfad zur JSON-Datei
+file_path = 'exercises.json'
+
 def display_exercise_info(exercise_name, instructions, video_url):
     st.subheader(exercise_name)
     with st.expander(":information_source: Read Instructions"):
