@@ -9,17 +9,6 @@ import json
 # Pfad zur JSON-Datei
 file_path = 'exercises.json'
 
-def display_exercise_info(exercise_name, instructions, video_url):
-    st.subheader(exercise_name)
-    with st.expander(":information_source: Read Instructions"):
-        for instruction in instructions:
-            st.write(instruction)
-    if video_url:
-        with st.expander(":video_camera: Watch Video"):
-            st.video(video_url)
-            st.write(f"Video Source: {video_url}")
-    st.divider()
-
 def show_exercises_by_category(file_path, category):
     # Öffnen und Lesen der JSON-Datei
     with open(file_path, 'r', encoding='utf-8') as file:
