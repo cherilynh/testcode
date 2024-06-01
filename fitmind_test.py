@@ -101,8 +101,8 @@ elif page == "Fitness":
        
         with col2:
            st.subheader("used Muscles")
-           #st.image("Back-Muscles-jpeg.webp")
-           #st.write("Image Source: https://samarpanphysioclinic.com/muscles-of-the-back/")
+           st.image("Rückenmuskulatur.jpeg")
+           st.write("Image Source: https://samarpanphysioclinic.com/muscles-of-the-back/")
         st.divider()
         
         category = 'Back'
