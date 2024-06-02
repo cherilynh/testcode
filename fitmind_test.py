@@ -51,15 +51,18 @@ def show_login_page():
     st.subheader("Login")
     username = st.text_input("Benutzername", key="login_username")
     password = st.text_input("Passwort", type='password', key="login_password")
-    if st.button("Login", key="login_button"):
+    login_button = st.button("Login", key="login_button")
+    if login_button:
         if authenticate(username, password):
             st.success("Erfolgreich eingeloggt!")
             st.session_state['logged_in'] = True
             st.session_state['username'] = username
+            st.experimental_rerun()
         else:
             st.error("Falscher Benutzername oder Passwort.")
     if st.button("Zur Registrierungsseite", key="go_to_register"):
         st.session_state['show_registration'] = True
+        st.experimental_rerun()
 
 # Funktion zur Anzeige der Registrierungsseite
 def show_registration_page():
@@ -67,17 +70,20 @@ def show_registration_page():
     new_username = st.text_input("Neuer Benutzername", key="register_username")
     new_password = st.text_input("Neues Passwort", type='password', key="register_password")
     confirm_password = st.text_input("Passwort bestätigen", type='password', key="confirm_password")
-    if st.button("Registrieren", key="register_button"):
+    register_button = st.button("Registrieren", key="register_button")
+    if register_button:
         if new_password != confirm_password:
             st.error("Passwörter stimmen nicht überein.")
         elif register_user(new_username, new_password):
             st.success("Erfolgreich registriert!")
             st.session_state['logged_in'] = True
             st.session_state['username'] = new_username
+            st.experimental_rerun()
         else:
             st.error("Benutzername bereits vergeben.")
     if st.button("Zurück zum Login", key="go_to_login"):
         st.session_state['show_registration'] = False
+        st.experimental_rerun()
 
 
 def main():
