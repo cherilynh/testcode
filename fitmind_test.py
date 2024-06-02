@@ -49,6 +49,9 @@ def main():
     # Auswahlbox für Login oder Registrierung
     choice = st.sidebar.selectbox("Wählen Sie eine Option", ["Login", "Registrieren"])
 
+    # Initialisierungsstatus für Login
+    login_status = False
+
     # Login-Formular
     if choice == "Login":
         st.subheader("Login")
@@ -57,7 +60,8 @@ def main():
         if st.button("Login"):
             if authenticate(username, password):
                 st.success("Erfolgreich eingeloggt!")
-                st.write(f"Willkommen, {username}!")
+                st.session_state['logged_in'] = True
+                st.session_state['username'] = username
             else:
                 st.error("Falscher Benutzername oder Passwort.")
 
@@ -72,9 +76,18 @@ def main():
                 st.error("Passwörter stimmen nicht überein.")
             elif register_user(new_username, new_password):
                 st.success("Erfolgreich registriert!")
-                st.write(f"Willkommen, {new_username}!")
+                st.session_state['logged_in'] = True
+                st.session_state['username'] = new_username
             else:
                 st.error("Benutzername bereits vergeben.")
+
+    # Prüfen, ob der Benutzer eingeloggt ist
+    if st.session_state.get('logged_in'):
+        st.subheader(f"Willkommen, {st.session_state['username']}!")
+        # Hier kannst du den Hauptinhalt der App anzeigen
+        st.write("Hier ist der Hauptinhalt der Anwendung.")
+    else:
+        st.warning("Bitte melden Sie sich an oder registrieren Sie sich, um fortzufahren.")
 
 # Pfad zur JSON-Datei
 file_path = 'exercises.json'
@@ -110,6 +123,8 @@ def show_exercises_by_category(file_path, category):
         st.divider()
 
 if __name__ == '__main__':
+    if 'logged_in' not in st.session_state:
+        st.session_state['logged_in'] = False
     main()
 
 st.sidebar.header("Menu")
