@@ -109,6 +109,9 @@ def show_exercises_by_category(file_path, category):
                 st.write(f"Video Source: {exercise['video']}")
         st.divider()
 
+if __name__ == '__main__':
+    main()
+
 st.sidebar.header("Menu")
 page = st.sidebar.radio("Choose what you need",["FitMind - Introduction", "Fitness", "Mental Health"])
 
