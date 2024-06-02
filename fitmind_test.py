@@ -170,7 +170,6 @@ def show_main_page():
     page = st.sidebar.radio("Choose what you need",["FitMind - Introduction", "Fitness", "Mental Health"])
 
     if page == "FitMind - Introduction":
-        st.title("Welcome to FitMind!")
         st.markdown("""
         FitMind is a health app that combines fitness and mental wellbeing to help users lead a balanced and healthy life.
         """)
@@ -919,7 +918,7 @@ def show_main_page():
     st.sidebar.text("fitmindbyjc@gmail.com")
 
 def startpage():
-    st.title("Willkommen zur Streamlit App")
+    st.title("Welcome to Fitmind")
 
     # Initialisierungsstatus für Login
     if 'logged_in' not in st.session_state:
