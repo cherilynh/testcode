@@ -5,6 +5,43 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import random
 import json
+import os
+import hashlib
+
+# Pfad zur Datei, in der Benutzerdaten gespeichert werden
+USER_DATA_FILE = 'user_data.json'
+
+# Funktion zum Laden von Benutzerdaten
+def load_user_data():
+    if os.path.exists(USER_DATA_FILE):
+        with open(USER_DATA_FILE, 'r') as file:
+            return json.load(file)
+    return {}
+
+# Funktion zum Speichern von Benutzerdaten
+def save_user_data(user_data):
+    with open(USER_DATA_FILE, 'w') as file:
+        json.dump(user_data, file)
+
+# Funktion zum Hashen von Passwörtern
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
+# Funktion zum Überprüfen der Anmeldedaten
+def authenticate(username, password):
+    user_data = load_user_data()
+    if username in user_data and user_data[username] == hash_password(password):
+        return True
+    return False
+
+# Funktion zur Registrierung eines neuen Benutzers
+def register_user(username, password):
+    user_data = load_user_data()
+    if username in user_data:
+        return False
+    user_data[username] = hash_password(password)
+    save_user_data(user_data)
+    return True
 
 # Pfad zur JSON-Datei
 file_path = 'exercises.json'
