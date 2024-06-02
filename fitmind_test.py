@@ -8,7 +8,6 @@ import json
 import os
 import hashlib
 from github_contents import GithubContents
-import api_calls
 import streamlit_authenticator as stauth   
 
 # Pfad zur Datei, in der Benutzerdaten gespeichert werden
