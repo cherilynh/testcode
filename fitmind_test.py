@@ -49,25 +49,25 @@ def register_user(username, password):
 # Funktion zur Anzeige der Login-Seite
 def show_login_page():
     st.subheader("Login")
-    username = st.text_input("Benutzername")
-    password = st.text_input("Passwort", type='password')
-    if st.button("Login"):
+    username = st.text_input("Benutzername", key="login_username")
+    password = st.text_input("Passwort", type='password', key="login_password")
+    if st.button("Login", key="login_button"):
         if authenticate(username, password):
             st.success("Erfolgreich eingeloggt!")
             st.session_state['logged_in'] = True
             st.session_state['username'] = username
         else:
             st.error("Falscher Benutzername oder Passwort.")
-    if st.button("Registrieren"):
-        show_registration_page()
+    if st.button("Zur Registrierungsseite", key="go_to_register"):
+        st.session_state['show_registration'] = True
 
 # Funktion zur Anzeige der Registrierungsseite
 def show_registration_page():
     st.subheader("Registrieren")
-    new_username = st.text_input("Neuer Benutzername")
-    new_password = st.text_input("Neues Passwort", type='password')
-    confirm_password = st.text_input("Passwort bestätigen", type='password')
-    if st.button("Registrieren"):
+    new_username = st.text_input("Neuer Benutzername", key="register_username")
+    new_password = st.text_input("Neues Passwort", type='password', key="register_password")
+    confirm_password = st.text_input("Passwort bestätigen", type='password', key="confirm_password")
+    if st.button("Registrieren", key="register_button"):
         if new_password != confirm_password:
             st.error("Passwörter stimmen nicht überein.")
         elif register_user(new_username, new_password):
@@ -76,8 +76,8 @@ def show_registration_page():
             st.session_state['username'] = new_username
         else:
             st.error("Benutzername bereits vergeben.")
-    if st.button("Zurück zum Login"):
-        show_login_page()
+    if st.button("Zurück zum Login", key="go_to_login"):
+        st.session_state['show_registration'] = False
 
 
 def main():
