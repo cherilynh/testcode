@@ -43,6 +43,39 @@ def register_user(username, password):
     save_user_data(user_data)
     return True
 
+def main():
+    st.title("Login und Registrierung")
+
+    # Auswahlbox für Login oder Registrierung
+    choice = st.sidebar.selectbox("Wählen Sie eine Option", ["Login", "Registrieren"])
+
+    # Login-Formular
+    if choice == "Login":
+        st.subheader("Login")
+        username = st.text_input("Benutzername")
+        password = st.text_input("Passwort", type='password')
+        if st.button("Login"):
+            if authenticate(username, password):
+                st.success("Erfolgreich eingeloggt!")
+                st.write(f"Willkommen, {username}!")
+            else:
+                st.error("Falscher Benutzername oder Passwort.")
+
+    # Registrierungs-Formular
+    elif choice == "Registrieren":
+        st.subheader("Registrieren")
+        new_username = st.text_input("Neuer Benutzername")
+        new_password = st.text_input("Neues Passwort", type='password')
+        confirm_password = st.text_input("Passwort bestätigen", type='password')
+        if st.button("Registrieren"):
+            if new_password != confirm_password:
+                st.error("Passwörter stimmen nicht überein.")
+            elif register_user(new_username, new_password):
+                st.success("Erfolgreich registriert!")
+                st.write(f"Willkommen, {new_username}!")
+            else:
+                st.error("Benutzername bereits vergeben.")
+
 # Pfad zur JSON-Datei
 file_path = 'exercises.json'
 
