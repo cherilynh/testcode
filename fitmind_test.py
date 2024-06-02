@@ -912,19 +912,24 @@ def show_main_page():
     st.sidebar.text("For questions or suggestions, contact us at")
     st.sidebar.text("fitmindbyjc@gmail.com")
 
-def main():
+def startpage():
     st.title("Willkommen zur Streamlit App")
 
     # Initialisierungsstatus für Login
     if 'logged_in' not in st.session_state:
         st.session_state['logged_in'] = False
+    if 'show_registration' not in st.session_state:
+        st.session_state['show_registration'] = False
 
-    # Login-Seite anzeigen, wenn der Benutzer nicht eingeloggt ist
+    # Login-Seite oder Registrierungsseite anzeigen, wenn der Benutzer nicht eingeloggt ist
     if not st.session_state['logged_in']:
-        show_login_page()
+        if st.session_state['show_registration']:
+            show_registration_page()
+        else:
+            show_login_page()
     else:
         show_main_page()
 
 if __name__ == '__main__':
-    main()
+    startpage()
 
